@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Md Sherazum Munir</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    #text {
+      font-size: 20px;
+      white-space: pre-wrap;
+      border-right: 2px solid #00ffcc;
+      padding-right: 5px;
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="text"></div>
+
+  <script>
+    const message = "It's me Md Sherazum Munir and I am the one who is seeking for becoming a Billionaire and now I will do it. One just thing—my mom does not want to go with me in foreign.";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50); // typing speed
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
